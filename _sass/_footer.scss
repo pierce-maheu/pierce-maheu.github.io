@@ -1,0 +1,53 @@
+// ============================================
+// FOOTER
+// ============================================
+
+.site-footer {
+  background: $cream;
+  padding: $space-xl 0 $space-lg;
+  text-align: center;
+  border-top: 1px solid rgba($ink, 0.1);
+}
+
+.site-footer__mark svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: $space-sm;
+  color: $ink;
+}
+
+.site-footer__location {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.site-footer__contact {
+  margin-bottom: $space-md;
+
+  a {
+    border-bottom: 1px solid rgba($ink, 0.3);
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: $teal;
+      border-color: $teal;
+    }
+  }
+}
+
+.site-footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $space-md;
+  margin: 0 0 $space-md;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-footer__copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}

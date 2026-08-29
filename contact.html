@@ -1,0 +1,46 @@
+---
+layout: default
+title: Contact
+description: Get in touch with Pierce Maheu about classical and fingerstyle guitar lessons.
+---
+
+{% include page-header.html
+   title="Contact"
+   lede="Have a question about lessons, or ready to schedule a trial? Send a note below."
+%}
+
+<section class="band band--cream">
+  <div class="container">
+    <!--
+      NOTE FOR MIKE: this form is not yet wired to a backend.
+      Easiest path: sign up at formspree.io (free tier), then set
+      action="https://formspree.io/f/your-form-id" below and add
+      method="POST". No JS required.
+    -->
+    <form class="contact-form" action="#" method="POST">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="student">Student's experience level</label>
+        <input type="text" id="student" name="student" placeholder="e.g. complete beginner, 3 years of lessons">
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send message</button>
+    </form>
+
+    <div class="contact-detail">
+      <p class="contact-detail__row"><a href="mailto:hello@piercemaheu.com">hello@piercemaheu.com</a></p>
+      <p class="contact-detail__row">Charleston Lowcountry, South Carolina</p>
+      <p class="contact-detail__row">In-studio &amp; online lessons available</p>
+    </div>
+  </div>
+</section>

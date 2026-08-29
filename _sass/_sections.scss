@@ -1,0 +1,141 @@
+// ============================================
+// SECTION BANDS — alternating light/dark, full-bleed
+// ============================================
+
+.band {
+  padding: $space-2xl 0;
+}
+
+.band--cream   { background: $cream;   color: $ink; }
+.band--sand    { background: $sand;    color: $ink; }
+.band--dark    { background: $charcoal; color: $off-white; }
+.band--dark-alt{ background: $charcoal-alt; color: $off-white; }
+
+.band__eyebrow {
+  color: $teal;
+  margin-bottom: $space-sm;
+  justify-content: center;
+}
+
+.band--dark .band__eyebrow,
+.band--dark-alt .band__eyebrow {
+  color: $teal-light;
+}
+
+.band__title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: $space-md;
+}
+
+.band__lede {
+  font-family: $font-body;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25rem;
+  margin-bottom: $space-sm;
+  opacity: 0.92;
+}
+
+.band__body {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+.band__header {
+  text-align: center;
+  margin-bottom: $space-lg;
+}
+
+// --- Two-up content layout (headline+copy beside supporting image) ---
+.band__split {
+  display: grid;
+  gap: $space-lg;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: $space-xl;
+  }
+}
+
+// ============================================
+// PHOTO BAND — full-bleed placeholder imagery
+// ============================================
+
+.photo-band {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+// When a real photo replaces the placeholder, it should crop to fill
+// this box (whatever height context sets — aspect-ratio or a stretched
+// parent like the homepage hero) rather than distort.
+.photo-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-band--tall {
+  aspect-ratio: 4 / 5;
+
+  @media (min-width: 900px) {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+.photo-band--light {
+  background: $placeholder-light;
+}
+
+.photo-band--dark {
+  background: $placeholder-dark;
+}
+
+.photo-band__label {
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(#000, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.photo-band--dark .photo-band__label {
+  border-color: rgba(#fff, 0.22);
+}
+
+.photo-band__label span {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(#000, 0.45);
+  max-width: 22rem;
+}
+
+.photo-band--dark .photo-band__label span {
+  color: rgba(#fff, 0.55);
+}
+
+// --- Inline (contained, not full-bleed) supporting image ---
+.photo-inline {
+  aspect-ratio: 4 / 5;
+  background: $placeholder-light;
+  position: relative;
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+.photo-inline .photo-band__label {
+  inset: 10px;
+}

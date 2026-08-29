@@ -1,0 +1,24 @@
+<header class="site-header">
+  <a href="{{ '/' | relative_url }}" class="site-header__mark">
+    {% include mark.html %}
+    <span class="site-header__wordmark">Pierce Maheu</span>
+  </a>
+
+  <nav aria-label="Primary">
+    <ul class="site-nav">
+      {% for item in site.nav %}
+        {% assign is_active = false %}
+        {% if page.url == item.url %}
+          {% assign is_active = true %}
+        {% endif %}
+        <li>
+          <a href="{{ item.url | relative_url }}"
+             class="site-nav__link{% if is_active %} site-nav__link--active{% endif %}"
+             {% if is_active %}aria-current="page"{% endif %}>
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

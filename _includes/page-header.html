@@ -1,0 +1,15 @@
+<!--
+  Page header band: centered eyebrow (optional) + bold title + centered lede.
+  Params: eyebrow (string, optional), title (string), lede (string), variant ("cream"|"dark")
+-->
+<section class="band band--{{ include.variant | default: "cream" }}">
+  <div class="container band__header">
+    {% if include.eyebrow %}
+      <p class="eyebrow band__eyebrow">{{ include.eyebrow }}</p>
+    {% endif %}
+    <h1 class="band__title">{{ include.title }}</h1>
+    {% if include.lede %}
+      <p class="copy band__body" style="margin-top: 1.5rem; font-size: 1.2rem;">{{ include.lede }}</p>
+    {% endif %}
+  </div>
+</section>

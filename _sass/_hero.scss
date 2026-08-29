@@ -1,0 +1,67 @@
+// ============================================
+// HERO — full-bleed split (home page only)
+// ============================================
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    min-height: 620px;
+  }
+}
+
+.hero-split__statement {
+  background: $charcoal;
+  color: $off-white;
+  display: flex;
+  align-items: center;
+  padding: $space-2xl $space-md;
+
+  @media (min-width: 900px) {
+    padding: $space-xl;
+  }
+}
+
+.hero-split__lines {
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  line-height: 1.35;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+.hero-split__line {
+  position: relative;
+ padding-left: 0em;
+  margin-bottom: 0.15em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    color: $teal-light;
+  }
+}
+
+.hero-split__photo {
+  min-height: 340px;
+
+  @media (min-width: 900px) {
+    // On mobile this column stacks below the statement, so its own
+    // aspect-ratio (set on the nested .photo-band) controls its height.
+    // At desktop width the two columns sit side by side, so this column
+    // should instead stretch to match the statement panel's height —
+    // override the aspect-ratio and fill the grid row completely.
+    min-height: 0;
+    height: 100%;
+
+    .photo-band {
+      height: 100%;
+      aspect-ratio: auto;
+    }
+  }
+}
+

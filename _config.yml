@@ -1,0 +1,46 @@
+title: Pierce Maheu | Classical & Fingerstyle Guitar
+description: >-
+  Private classical and fingerstyle guitar lessons with Pierce Maheu,
+  serving the Charleston, South Carolina Lowcountry.
+url: "https://piercemaheu.com"
+baseurl: ""
+
+author: Pierce Maheu
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Lessons
+    url: /lessons/
+  - title: Testimonials
+    url: /testimonials/
+  - title: Gallery
+    url: /gallery/
+  - title: Contact
+    url: /contact/

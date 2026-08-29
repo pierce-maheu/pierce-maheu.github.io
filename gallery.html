@@ -1,0 +1,29 @@
+---
+layout: default
+title: Gallery
+description: Photos of Pierce Maheu teaching, performing, and in the studio.
+---
+
+{% include page-header.html
+   title="Gallery"
+   lede="Moments from lessons, performances, and the studio."
+%}
+
+<section class="gallery-grid">
+  {% include photo-band.html variant="light" label="PHOTO 1 — PIERCE PLAYING, STUDIO" %}
+  {% include photo-band.html variant="dark"  label="PHOTO 2 — PERFORMANCE, LIVE" %}
+  {% include photo-band.html variant="light" label="PHOTO 3 — CLOSE-UP, HANDS ON STRINGS" %}
+  {% include photo-band.html variant="dark"  label="PHOTO 4 — STUDENT LESSON MOMENT" %}
+  {% include photo-band.html variant="light" label="PHOTO 5 — GUITAR DETAIL, STILL LIFE" %}
+  {% include photo-band.html variant="dark"  label="PHOTO 6 — OUTDOORS, LOWCOUNTRY LANDSCAPE" %}
+  {% include photo-band.html variant="light" label="PHOTO 7 — STUDIO SPACE, WIDE" %}
+  {% include photo-band.html variant="dark"  label="PHOTO 8 — PORTRAIT, BLACK & WHITE" %}
+  {% include photo-band.html variant="light" label="PHOTO 9 — RECITAL OR EVENT" %}
+</section>
+
+<section class="band band--sand text-center">
+  <div class="container">
+    <p style="margin-bottom: 1.5rem;">Photos coming soon — check back after our next studio session.</p>
+    <a href="{{ '/contact/' | relative_url }}" class="form-submit">Get in touch</a>
+  </div>
+</section>

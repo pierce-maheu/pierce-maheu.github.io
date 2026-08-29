@@ -1,0 +1,39 @@
+// ============================================
+// TESTIMONIALS
+// ============================================
+
+.testimonial-grid {
+  display: grid;
+  gap: $space-lg $space-md;
+  margin-top: $space-lg;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial {
+  padding-top: $space-md;
+  border-top: 2px solid rgba($teal, 0.35);
+}
+
+.band--dark .testimonial,
+.band--dark-alt .testimonial {
+  border-top-color: rgba($teal-light, 0.4);
+}
+
+.testimonial__quote {
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: $space-sm;
+}
+
+.testimonial__name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}

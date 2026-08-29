@@ -1,0 +1,73 @@
+// ============================================
+// CONTACT
+// ============================================
+
+.contact-form {
+  display: grid;
+  gap: $space-md;
+  margin-top: $space-lg;
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: $font-body;
+  font-size: 1rem;
+  padding: 0.85rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba($ink, 0.3);
+  color: $ink;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: $teal;
+  }
+}
+
+.form-submit {
+  justify-self: center;
+  margin-top: $space-sm;
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid $teal;
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.7; }
+}
+
+.contact-detail {
+  text-align: center;
+  margin-top: $space-xl;
+}
+
+.contact-detail__row {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.contact-detail__row a {
+  border-bottom: 1px solid rgba($teal, 0.5);
+
+  &:hover { color: $teal; }
+}

@@ -1,0 +1,65 @@
+// ============================================
+// NAV — centered mark, centered links, active underline
+// ============================================
+
+.site-header {
+  background: $cream;
+  padding: $space-md 0 $space-sm;
+  text-align: center;
+}
+
+.site-header__mark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: $space-md;
+
+  svg {
+    width: 46px;
+    height: 46px;
+    color: $ink;
+  }
+}
+
+.site-header__wordmark {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $ink;
+}
+
+.site-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $space-lg;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__link {
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: $ink;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: rgba($teal, 0.4);
+  }
+}
+
+.site-nav__link--active {
+  border-color: $teal;
+}
+
+@media (max-width: 560px) {
+  .site-nav { gap: $space-md; }
+  .site-nav__link { font-size: 0.95rem; }
+}

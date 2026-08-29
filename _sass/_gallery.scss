@@ -1,0 +1,20 @@
+// ============================================
+// GALLERY
+// ============================================
+
+.gallery-grid {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-grid .photo-band {
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-grid .photo-band__label { inset: 6px; }
+.gallery-grid .photo-band__label span { font-size: 0.62rem; }

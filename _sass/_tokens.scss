@@ -1,0 +1,40 @@
+// ============================================
+// DESIGN TOKENS — Pierce Maheu Guitar
+// Structural reference: tomofujitamusic.com
+// Palette adapted for "classical guitar, coastal"
+// ============================================
+
+// --- Color: light bands ---
+$cream:        #F5F2EA;   // primary light bg, nav
+$sand:         #EAE4D6;   // secondary light band (alt section)
+$ink:          #1B1C19;   // primary text on light
+
+// --- Color: dark bands ---
+$charcoal:     #1E1F1C;   // primary dark band (warm near-black)
+$charcoal-alt: #292722;   // secondary dark band, slight lift
+$off-white:    #F4F1EA;   // text on dark bands
+
+// --- Color: single accent ---
+$teal:         #3C6B62;   // restrained coastal accent
+$teal-light:   #6E958C;   // teal for use on dark backgrounds
+
+// --- Placeholder fill (no real photography yet) ---
+$placeholder-light: #DAD3BF;
+$placeholder-dark:  #33322C;
+
+// --- Type ---
+$font-display: "Poppins", -apple-system, sans-serif;
+$font-body:    "Nunito Sans", -apple-system, sans-serif;
+
+// --- Spacing scale ---
+$space-xs:  0.5rem;
+$space-sm:  1rem;
+$space-md:  2rem;
+$space-lg:  4rem;
+$space-xl:  6rem;
+$space-2xl: 9rem;
+
+// --- Layout ---
+$content-max: 1180px;
+$copy-max:    46rem;
+$radius:      2px; // near-zero radius, editorial not soft

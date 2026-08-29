@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__mark">{% include mark.html %}</div>
+    <p class="site-footer__location">Charleston Lowcountry, South Carolina</p>
+    <p class="site-footer__contact">
+      <a href="mailto:hello@piercemaheu.com">hello@piercemaheu.com</a>
+    </p>
+
+    <ul class="site-footer__nav">
+      {% for item in site.nav %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <p class="site-footer__copyright">
+      &copy; {{ site.time | date: '%Y' }} Pierce Maheu Guitar. All rights reserved.
+    </p>
+  </div>
+</footer>

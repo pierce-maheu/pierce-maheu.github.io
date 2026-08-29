@@ -1,0 +1,10 @@
+<!--
+  Full-bleed photo placeholder.
+  Params: variant ("light" | "dark"), tall (true/false), label (string)
+-->
+<div class="photo-band photo-band--{{ include.variant | default: "light" }}{% if include.tall %} photo-band--tall{% endif %}">
+  <div class="photo-band__label">
+    <span>{{ include.label }}</span>
+    <img src="assets/images/pierce_main.jpg" alt="Description of image">
+  </div>
+</div>
